@@ -6,9 +6,8 @@
       <class name="com.webshop.tests.RegisterpageTest">
         <methods>
           <include name="teardown"/>
+          <include name="testvalidationmessage"/>
           <include name="setupreport"/>
-          <include name="testinvaliddataentry"/>
-          <include name="testregisterlandingpage"/>
           <include name="pretest"/>
         </methods>
       </class> <!-- com.webshop.tests.RegisterpageTest -->

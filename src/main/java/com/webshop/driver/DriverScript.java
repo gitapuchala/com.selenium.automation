@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
+
 public class DriverScript 
 {
 	public static WebDriver driver;
@@ -35,7 +37,6 @@ public DriverScript()
 	/*
 	 * This method InitApplication() will launch the browser based on properties file value.
 	 */
-	
 	
 	public void InitApplication()
 	{
@@ -80,8 +81,8 @@ public static void quitdriver()
 {
 	try {
 		Thread.sleep(3000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
+	} catch (InterruptedException e)
+	{		
 		e.printStackTrace();
 	}
 	driver.quit();

@@ -11,28 +11,32 @@ import com.webshop.driver.DriverScript;
 import com.webshop.pages.Homepage;
 import com.webshop.pages.RegisterPage;
 
-public class Basetest extends DriverScript {
+public class Basetest extends DriverScript
+{
 	public static ExtentTest logger;
 	public static ExtentReports report;
 	Homepage hpg;
 	RegisterPage rpg;
 
 	@BeforeSuite
-	public void setupreport() {
-		ExtentHtmlReporter extent = new ExtentHtmlReporter("./testreports");
+	public void setupreport() 
+	{
+		ExtentHtmlReporter extent = new ExtentHtmlReporter("./testreports/autoresult.html");
 		report = new ExtentReports();
 		report.attachReporter(extent);
 	}
 
 	@BeforeMethod
-	public void pretest() {
+	public void pretest()
+	{
 		InitApplication();
 		hpg = new Homepage();
 		rpg = new RegisterPage();
 	}
 
 	@AfterMethod
-	public void teardown() {
+	public void teardown()
+	{
 		report.flush();
 		driver.quit();
 	}
